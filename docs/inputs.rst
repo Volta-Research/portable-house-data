@@ -11,6 +11,11 @@ The **Required** field in the table below indicates whether a parameter is requi
 For example, if the ``foundation`` object class is included, the ``foundationType`` variable is also required. 
 Object classes that are required indicate so in their section headers below.
 
+Compatibility
+*************
+
+Document last updated for schema version *v1.0.1*
+
 
 Data Provenance
 ***************

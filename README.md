@@ -2,6 +2,8 @@
 
 The Portable House Data format is a lightweight, machine-readable JSON format for describing Canadian homes so that data can be cleanly exchanged between assessment tools, modelling engines, utilities, municipalities, and services providers, including energy advisors and other related consultants. It's designed for interoperability to support various workflows across the country, enabling a healthy ecosystem of software services today and in the future.
 
+[![Schema: v1.0.1](https://img.shields.io/badge/schema-v1.0.1-blue.svg)](https://volta-research.github.io/portable-house-data/schema/versions/1.0.1/portableHouseData.schema.json)
+
 ## Why this standard
 
 -   Retrofit at scale in Canada: Portable, comparable house data is needed to accelerate discovery, planning, delivery, and verification of home retrofits.
@@ -11,19 +13,27 @@ The Portable House Data format is a lightweight, machine-readable JSON format fo
 
 ## Repository Structure
 
+_Current schema:_ `v1.0.1`
+
 ```
 portable-house-data/
-├── docs/                       # Documentation for the portable house data format
-│   ├── BACKGROUND.md           # Context and rationale
-│   ├── inputs.rst              # Inputs data model (building/site/enclosure/systems/occupancy)
-│   ├── outputs.rst             # Outputs data model (energy, GHG, peaks, by-fuel/by-end-use)
-│   ├── metadata.rst            # Metadata (service provider, client, timestamps, versions)
-├── sample_files/               # Example JSON instances
-│   └── base.json               # Minimal valid object (quick start)
-├── schema/                     # JSON Schema and validation examples
-│   ├── portableHouseData.schema.json
-│   └── test-validate.json      # VS Code example for inline validation
-└── README.md                   # You are here
+├── docs/                                                   # Documentation for the portable house data format
+│   ├── BACKGROUND.md                                       # Context and rationale
+│   ├── inputs.rst                                          # Inputs data model (building/site/enclosure/systems/occupancy)
+│   ├── outputs.rst                                         # Outputs data model (energy, GHG, peaks, by-fuel/by-end-use)
+│   ├── metadata.rst                                        # Metadata (service provider, client, timestamps, versions)
+├── sample_files/                                           # Example JSON instances
+│   └── base.json                                           # Minimal valid object (quick start)
+├── schema/                                                 # JSON Schema and validation examples
+├── latest/portableHouseData.schema.json                    # The latest JSON Schema version
+├── versions/                                               # Past JSON Schema versions
+├── ├── 1.0.0/portableHouseData.schema.json
+├── └── 1.0.1/portableHouseData.schema.json
+│   └── test-validate.json                                  # VS Code example for inline validation
+├── CHANGELOG.md                                            # Outlines changes between schema versions
+├── MIGRATIONS.md                                           # Tips on migrating to newer schema versions
+└── README.md                                               # You are here
+
 ```
 
 ## Quick Start

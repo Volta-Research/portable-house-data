@@ -1,13 +1,19 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://volta-research.github.io/portable-house-data/schema/latest/portableHouseData.schema.json",
     "title": "Portable House Data (v1.0.1)",
     "type": "object",
     "required": ["metadata", "inputs"],
     "properties": {
         "metadata": {
             "type": "object",
-            "required": ["request", "serviceProvider"],
+            "required": ["schemaVersion", "request", "serviceProvider"],
             "properties": {
+                "schemaVersion": {
+                    "type": "string",
+                    "pattern": "^\\d+\\.\\d+\\.\\d+$",
+                    "description": "Version of the Portable House Data schema that this file conforms to."
+                },
                 "client": {
                     "type": "object",
                     "properties": {
