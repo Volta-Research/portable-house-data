@@ -11,15 +11,15 @@ The **Required** field in the table below indicates whether a parameter is requi
 For example, if the ``foundation`` object class is included, the ``foundationType`` variable is also required. 
 Object classes that are required indicate so in their section headers below.
 
+
 Compatibility
-*************
+-------------
 
 Document last updated for schema version *v1.0.1*
 
 
 Data Provenance
-***************
-
+-----------------
 Throughout the Portable House Data standard, data provenance can be tracked through the inclusion of an optional "_src" tag appended to the end of a field key. 
 This tag can be used be service providers to provide additional context as to the source of data, and can assist in tracking changes to the data over its lifetime. 
 An example of how data provenance may be included is shown below::
