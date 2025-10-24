@@ -36,7 +36,7 @@ Tip: Put a `$schema` link at the top of any data file:
 
 ```
 {
-    "$schema": "../schema/portableHouseData.schema.json",
+    "$schema": "../schema/latest/portableHouseData.schema.json",
     "inputs": {...}
 }
 ```

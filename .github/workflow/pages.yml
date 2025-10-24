@@ -1,0 +1,70 @@
+name: Deploy schema to GitHub Pages
+
+on:
+    push:
+        tags:
+            - "v*.*.*" # deploy when you push a semver tag, e.g. v1.3.0
+    workflow_dispatch: # allow manual runs
+
+permissions:
+    contents: read
+    pages: write # required for actions/deploy-pages
+    id-token: write # required for actions/deploy-pages (OIDC)
+
+concurrency:
+    group: "pages"
+    cancel-in-progress: true
+
+jobs:
+    build-and-deploy:
+        runs-on: ubuntu-latest
+        environment:
+            name: github-pages
+            url: ${{ steps.deploy.outputs.page_url }}
+
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+
+            - name: Configure Pages
+              uses: actions/configure-pages@v5
+
+            - name: Determine release version from tag
+              id: version
+              run: |
+                  # GITHUB_REF_NAME is like "v1.3.0"
+                  TAG="${GITHUB_REF_NAME:-dev}"
+                  VER="${TAG#v}"
+                  echo "tag=$TAG" >> $GITHUB_OUTPUT
+                  echo "ver=$VER" >> $GITHUB_OUTPUT
+
+            - name: Validate schema paths exist
+              run: |
+                  test -f "schema/versions/${{ steps.version.outputs.ver }}/portableHouseData.schema.json" \
+                    || (echo "Missing schema/versions/${{ steps.version.outputs.ver }}/portableHouseData.schema.json" && exit 1)
+
+            - name: Prepare publish directory
+              run: |
+                  rm -rf public
+                  mkdir -p "public/schema/versions/${{ steps.version.outputs.ver }}"
+                  mkdir -p "public/schema/latest"
+
+                  # copy the versioned schema
+                  cp "schema/versions/${{ steps.version.outputs.ver }}/portableHouseData.schema.json" \
+                     "public/schema/versions/${{ steps.version.outputs.ver }}/portableHouseData.schema.json"
+
+                  # mirror to 'latest'
+                  cp "schema/versions/${{ steps.version.outputs.ver }}/portableHouseData.schema.json" \
+                     "public/schema/latest/portableHouseData.schema.json"
+
+                  # Optional: add a .nojekyll to avoid Jekyll processing
+                  touch public/.nojekyll
+
+            - name: Upload artifact
+              uses: actions/upload-pages-artifact@v3
+              with:
+                  path: public
+
+            - name: Deploy to Pages
+              id: deploy
+              uses: actions/deploy-pages@v4
