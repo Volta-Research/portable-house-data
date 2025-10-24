@@ -32,6 +32,17 @@
         "systems": {
             "primaryHeating": {
                 "fuelType": "natural gas"
+            },
+            "primaryHotWater": {
+                "fuelType": "solar",
+                "tankType": "storage tank",
+                "ageOfEquipment": 5
+            },
+            "secondaryHotWater": {
+                "fuelType": "electricity",
+                "tankType": "storage tank",
+                "ageOfEquipment": 5,
+                "fractionOfTank": 0.5
             }
         }
     }

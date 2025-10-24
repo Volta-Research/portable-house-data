@@ -27,6 +27,14 @@
         "enclosure": {
             "foundation": {
                 "foundationType": "basement"
+            },
+            "windows": {
+                "numWindows": 12,
+                "glassLayerType": "double-pane",
+                "coatingType": "low-e",
+                "frameType": "vinyl",
+                "fractionOperable": 0.25,
+                "fillGasType": "air"
             }
         },
         "systems": {

@@ -12,6 +12,24 @@ For example, if the ``foundation`` object class is included, the ``foundationTyp
 Object classes that are required indicate so in their section headers below.
 
 
+Data Provenance
+***************
+
+Throughout the Portable House Data standard, data provenance can be tracked through the inclusion of an optional "_src" tag appended to the end of a field key. 
+This tag can be used be service providers to provide additional context as to the source of data, and can assist in tracking changes to the data over its lifetime. 
+An example of how data provenance may be included is shown below::
+
+    {
+        ...
+        "foundation": {
+            "foundationType": "basement",
+            "foundationFloorArea": 60,
+            "foundationFloorArea_src": "Measured-HOT2000"
+        }
+    }
+
+Content of `_src` fields must be in string format, but the content itself is not prescribed.
+
 Building Information
 --------------------
 
@@ -118,7 +136,7 @@ The object key for this section is ``airInfiltration``.
   Variable Name                       Type      Units    Constraints    Required  Default      Notes
   ==================================  ========  =======  =============  ========  ===========  =================================================================
   ``airLeakageRate``                  double    ACH50    >0             No        See [#]_     Air leakage of dwelling
-  ``airLeakageRateAssumed``           boolean                           No                     Whether the provided value is assumed (true) or measured (false)
+  ``airLeakageRateAssumed``           boolean                           No        true         Whether the provided value is assumed (true) or measured (false)
   ==================================  ========  =======  =============  ========  ===========  =================================================================
 
   .. [#] ``airLeakageRate`` defaults are not provided, assuming interpreters have a means of assuming defaults where measured values are not provided (e.g. ERS Technical Procedures Appendix D).

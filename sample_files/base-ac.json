@@ -32,6 +32,9 @@
         "systems": {
             "primaryHeating": {
                 "fuelType": "natural gas"
+            },
+            "permanentCooling": {
+                "equipmentType": "central"
             }
         }
     }

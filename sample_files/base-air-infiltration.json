@@ -27,6 +27,10 @@
         "enclosure": {
             "foundation": {
                 "foundationType": "basement"
+            },
+            "airInfiltration": {
+                "airLeakageRate": 5,
+                "airLeakageRateAssumed": true
             }
         },
         "systems": {

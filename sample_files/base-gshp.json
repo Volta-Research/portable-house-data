@@ -31,7 +31,10 @@
         },
         "systems": {
             "primaryHeating": {
-                "fuelType": "natural gas"
+                "fuelType": "electricity"
+            },
+            "heatPump": {
+                "type": "ground-to-air"
             }
         }
     }

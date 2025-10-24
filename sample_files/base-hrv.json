@@ -32,6 +32,11 @@
         "systems": {
             "primaryHeating": {
                 "fuelType": "natural gas"
+            },
+            "ventilation": {
+                "recoveryVentilatorType": "hrv",
+                "ageOfRecoveryVentilator": 5,
+                "recoveryVentilatorEfficiency": 75
             }
         }
     }

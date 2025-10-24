@@ -1,5 +1,6 @@
 {
-    "$schema": "../schema/portableHouseData.schema.json",
+    "$schema": "./portableHouseData.schema.json",
+
     "metadata": {
         "request": {
             "requestId": "TEST-1234567890",

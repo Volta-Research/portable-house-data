@@ -26,7 +26,13 @@
         },
         "enclosure": {
             "foundation": {
-                "foundationType": "basement"
+                "foundationType": "basement",
+                "foundationFloorArea": 60,
+                "foundationPerimeter": 35,
+                "foundationWallHeight": 2.4,
+                "foundationWallDepth": 1.6,
+                "foundationSlabInsulation": 0,
+                "foundationWallInsulation": 2.11
             }
         },
         "systems": {

@@ -15,8 +15,12 @@
             "specifications": {
                 "yearBuilt": 1980,
                 "buildingType": "detached",
+                "numConditionedFloors": 3,
                 "numConditionedFloorsAboveGrade": 2,
-                "totalConditionedFloorArea": 185
+                "totalConditionedFloorArea": 185,
+                "facingDirection": "S",
+                "layoutType": "standard",
+                "planShape": "l-shape"
             }
         },
         "buildingSite": {

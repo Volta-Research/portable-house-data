@@ -32,6 +32,10 @@
         "systems": {
             "primaryHeating": {
                 "fuelType": "natural gas"
+            },
+            "heatPump": {
+                "type": "air-to-air",
+                "switchoverTemperature": -5
             }
         }
     }

@@ -31,7 +31,11 @@
         },
         "systems": {
             "primaryHeating": {
-                "fuelType": "natural gas"
+                "fuelType": "natural gas",
+                "equipmentType": "furnace",
+                "equipmentSubType": "condensing",
+                "ageOfEquipment": 5,
+                "efficiency": 96
             }
         }
     }

@@ -27,6 +27,11 @@
         "enclosure": {
             "foundation": {
                 "foundationType": "basement"
+            },
+            "windows": {
+                "numWindows": 12,
+                "overallUValue": 1.2,
+                "shgc": 0.3
             }
         },
         "systems": {

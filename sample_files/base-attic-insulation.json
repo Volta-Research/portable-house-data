@@ -27,6 +27,9 @@
         "enclosure": {
             "foundation": {
                 "foundationType": "basement"
+            },
+            "atticCeilings": {
+                "ceilingInsulation": 8.98
             }
         },
         "systems": {

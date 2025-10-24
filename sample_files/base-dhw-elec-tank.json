@@ -32,6 +32,12 @@
         "systems": {
             "primaryHeating": {
                 "fuelType": "natural gas"
+            },
+            "primaryHotWater": {
+                "fuelType": "electricity",
+                "tankType": "storage tank",
+                "efficiency": 0.88,
+                "ageOfEquipment": 10
             }
         }
     }

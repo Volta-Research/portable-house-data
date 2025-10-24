@@ -32,6 +32,13 @@
         "systems": {
             "primaryHeating": {
                 "fuelType": "natural gas"
+            },
+            "solarPv": {
+                "mountingLocation": "roof",
+                "systemCapacity": 8,
+                "systemTiltAngle": 42,
+                "systemOrientation": 180,
+                "systemEfficiency": 18
             }
         }
     }
