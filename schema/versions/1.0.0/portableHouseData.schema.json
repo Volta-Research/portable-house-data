@@ -32,6 +32,7 @@
                     "description": "Name and ID representing the source of the request",
                     "properties": {
                         "providerName": { "type": "string" },
+                        "providerEmail": { "type": "string" },
                         "providerId": { "type": "string" }
                     }
                 }
