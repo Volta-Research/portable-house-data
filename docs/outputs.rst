@@ -8,7 +8,7 @@ It is an optional add-on to the inputs section of the portable house data file.
 Compatibility
 *************
 
-Document last updated for schema version *v1.0.1*
+Document last updated for schema version *v1.0.2*
 
 
 Outputs

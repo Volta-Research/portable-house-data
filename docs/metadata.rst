@@ -8,7 +8,7 @@ The object key for this section is ``metadata``.
 Compatibility
 *************
 
-Document last updated for schema version *v1.0.1*
+Document last updated for schema version *v1.0.2*
 
 
 Schema Version (REQUIRED)
@@ -50,7 +50,7 @@ The object key for this section is ``request``.
   ==================================  ========  =======  ===========  ========  ===========  ============================================================
   Variable Name                       Type      Units    Constraints  Required  Default      Notes
   ==================================  ========  =======  ===========  ========  ===========  ============================================================      
-  ``requestID``                       string                          Yes                    Unique ID for the request (e.g. UUID)
+  ``requestId``                       string                          Yes                    Unique ID for the request (e.g. UUID)
   ``requestTimeStamp``                string                          Yes                    Timestamp for the request
   ==================================  ========  =======  ===========  ========  ===========  ============================================================
 

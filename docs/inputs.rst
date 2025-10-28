@@ -15,7 +15,7 @@ Object classes that are required indicate so in their section headers below.
 Compatibility
 -------------
 
-Document last updated for schema version *v1.0.1*
+Document last updated for schema version *v1.0.2*
 
 
 Data Provenance
@@ -60,7 +60,7 @@ The Building Specifications section is always required, meaning that the ``yearB
   ``totalConditionedFloorArea``       double    m²       >0, <=600    Yes                    Total conditioned floor area of the building
   ==================================  ========  =======  ===========  ========  ===========  ============================================================
 
-  .. [#] ``layoutType`` choices are "standard" and "split".
+  .. [#] ``layoutType`` choices are "standard", and "split".
   .. [#] ``planShape`` choices are "rectangular", "t-shape", "l-shape", "5-6 corners", "7-8 corners", "9-10 corners", and "11 or more corners"
   .. [#] ``buildingType`` choices are "detached", "attached", "row-middle", "row-end", "murb unit", and "murb building"
   .. [#] ``facingDirection`` choices are "N", "NE", "E", "SE", "S", "SW", "W", and "NW"
@@ -366,7 +366,7 @@ The object key for this section is ``permanentCooling``.
   ==================================  ========  ========  ===============  ==============  ===========  ================================================
   ``equipmentType``                   string              See [#]_         No              central      The type of permanent cooling system                                
   ``efficiency``                      double    SEER                       No                           The efficiency of the cooling system, assumed to be in SEER when no units are provided                                     
-  ``efficiencyUnits``                 string              COP,SEER,SEER2   No              SEER         Units of the provided cooling efficiency                                        
+  ``efficiencyUnits``                 string              See [#]_         No              SEER         Units of the provided cooling efficiency                                        
   ``capacity``                        double    kW                                                      The capacity of the cooling system, assumed to be in kW when no units are provided                                         
   ``capacityUnits``                   string              kW, BTU/h        No              kW           Units of the provided cooling capacity                                             
   ``manufacturerName``                string                               No                           Manufacturer/brand name of the cooling system                                       
@@ -377,6 +377,7 @@ The object key for this section is ``permanentCooling``.
   ==================================  ========  ========  ===============  ==============  ===========  ================================================
 
   .. [#] ``equipmentType`` choices are "central", and "mini-split"
+  .. [#] ``efficiencyUnits`` choices are "COP", "SEER", "SEER2", and "EER"
   .. [#] ``installed`` should be set to true if the presence of a cooling system is indicated without any other parameters, but is otherwise not required.
 
 
@@ -390,7 +391,7 @@ The object key for this section is ``temporaryCooling``.
   ==================================  ========  ========  ===============  ==============  ===========  ================================================
   ``equipmentType``                   string              See [#]_         No              central      The type of temporary cooling system                                
   ``efficiency``                      double    SEER                       No                           The efficiency of the cooling system, assumed to be in SEER when no units are provided                                     
-  ``efficiencyUnits``                 string              COP,SEER,SEER2   No              SEER         Units of the provided cooling efficiency                                        
+  ``efficiencyUnits``                 string              See [#]_         No              SEER         Units of the provided cooling efficiency                                        
   ``capacity``                        double    kW                                                      The capacity of the cooling system, assumed to be in kW when no units are provided                                         
   ``capacityUnits``                   string              kW, BTU/h        No              kW           Units of the provided cooling capacity                                             
   ``manufacturerName``                string                               No                           Manufacturer/brand name of the cooling system                                       
@@ -401,6 +402,7 @@ The object key for this section is ``temporaryCooling``.
   ==================================  ========  ========  ===============  ==============  ===========  ================================================
 
   .. [#] ``equipmentType`` choices are "window", and "floor"
+  .. [#] ``efficiencyUnits`` choices are "COP", "SEER", "SEER2", and "EER"
   .. [#] ``installed`` should be set to true if the presence of a cooling system is indicated without any other parameters, but is otherwise not required.
 
 Heat Pump
@@ -426,7 +428,7 @@ The object key for this section is ``heatPump``.
   ``coldClimateRatingTemp``             double    ˚C        >-50             No        -15˚C        Temperature point for the cold climate heating capacity and efficiency                    
   ``usedForCooling``                    boolean                              No        true         Whether or not the heat pump is used for cooling in addition to heating                                    
   ``ratedCoolingEfficiency``            double    COP       >0               No                     Rated cooling efficiency, typically at 35˚C/95˚F                                
-  ``ratedCoolingEfficiencyUnits``       double    COP       COP,SEER,SEER2   No                     Units for the cooling efficiency provided                                   
+  ``ratedCoolingEfficiencyUnits``       string              See [#]_         No                     Units for the cooling efficiency provided. EER should only be used for ground-to-air heat pumps.                                   
   ``ratedCoolingCapacity``              double    kW        >0               No                     Rated cooling capacity, typically at 35˚C/95˚F                                         
   ``ratedCoolingCapacityUnits``         string              kW, BTU/hr       No                     Units for the cooling capacity provided                                                            
   ``ratedCoolingTemp``                  double    ˚C        >15              No        35˚C         Temperature rating point for the provided cooling capacity and efficiency                                               
@@ -439,6 +441,7 @@ The object key for this section is ``heatPump``.
   .. [#] ``type`` choices are "air-to-air", "air-to-water", "ground-to-air", and "water-to-air"
   .. [#] ``equipmentSubType`` choices are "central", "mini-split", and "multi-split"
   .. [#] ``fuelType`` choices are "electricity", and "natural gas"
+  .. [#] ``ratedCoolingEfficiencyUnits`` choices are "COP", "SEER", "SEER2", and "EER"
 
 
 Primary Domestic Hot Water (DHW)
@@ -683,7 +686,7 @@ The object key for this section is ``temperatureControl``.
   ==================================  ========  ========  =============  ========  ===========  ==========================================================
   Variable Name                       Type      Units     Constraints    Required  Default      Notes
   ==================================  ========  ========  =============  ========  ===========  ==========================================================
-  ``hasSmartThermostat``              boolean                            No        false        Indicates the presence of a                                      
+  ``hasSmartThermostat``              boolean                            No        false        Indicates the presence of a Smart Thermostat                                       
   ``smartThermostatModel``            string                             No                     Make/model of smart thermostat                                
   ``heatingSetpointDay``              double    ˚C                       No        22           Heating season daytime set point                                   
   ``heatingSetpointNight``            double    ˚C                       No        22           Heating season nighttime/setback set point                                     
