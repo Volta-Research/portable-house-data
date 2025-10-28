@@ -1,7 +1,7 @@
 {
     "$schema": "../schema/latest/portableHouseData.schema.json",
     "metadata": {
-        "schemaVersion": "1.0.1",
+        "schemaVersion": "1.0.2",
         "request": {
             "requestId": "TEST-1234567890",
             "requestTimeStamp": "2025-01-01T12:00:00Z"
