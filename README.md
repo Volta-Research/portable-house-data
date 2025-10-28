@@ -2,7 +2,7 @@
 
 The Portable House Data format is a lightweight, machine-readable JSON format for describing Canadian homes so that data can be cleanly exchanged between assessment tools, modelling engines, utilities, municipalities, and services providers, including energy advisors and other related consultants. It's designed for interoperability to support various workflows across the country, enabling a healthy ecosystem of software services today and in the future.
 
-[![Schema: v1.0.1](https://img.shields.io/badge/schema-v1.0.1-blue.svg)](https://volta-research.github.io/portable-house-data/schema/versions/1.0.1/portableHouseData.schema.json)
+[![Schema: v1.0.2](https://img.shields.io/badge/schema-v1.0.2-blue.svg)](https://volta-research.github.io/portable-house-data/schema/versions/1.0.2/portableHouseData.schema.json)
 
 ## Why this standard
 
@@ -13,7 +13,7 @@ The Portable House Data format is a lightweight, machine-readable JSON format fo
 
 ## Repository Structure
 
-_Current schema:_ `v1.0.1`
+_Current schema:_ `v1.0.2`
 
 ```
 portable-house-data/
@@ -29,6 +29,7 @@ portable-house-data/
 ├── versions/                                               # Past JSON Schema versions
 ├── ├── 1.0.0/portableHouseData.schema.json
 ├── └── 1.0.1/portableHouseData.schema.json
+├── └── 1.0.2/portableHouseData.schema.json
 │   └── test-validate.json                                  # VS Code example for inline validation
 ├── CHANGELOG.md                                            # Outlines changes between schema versions
 ├── MIGRATIONS.md                                           # Tips on migrating to newer schema versions

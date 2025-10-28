@@ -1,7 +1,7 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://volta-research.github.io/portable-house-data/schema/latest/portableHouseData.schema.json",
-    "title": "Portable House Data (v1.0.1)",
+    "title": "Portable House Data (v1.0.2)",
     "type": "object",
     "required": ["metadata", "inputs"],
     "properties": {
